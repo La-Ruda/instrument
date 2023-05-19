@@ -58,17 +58,19 @@ body {
 }
 
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #000;
+  z-index: 10;
 }
 
 .header__inner {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -102,25 +104,42 @@ body {
 
 .header__nav__link:hover:before {
   content: "[";
-  right: 10px;
   position: relative;
   font-weight: 100;
   color: gray;
+  right: 10px;
 }
 
 .header__nav__link:hover:after {
   content: "]";
-  left: 10px;
   position: relative;
   font-weight: 100;
   color: gray;
+  left: 10px;
 }
 
 .main__wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-.video__wrapper {
-  padding: 121px 0 0 0;
+.main__video__wrapper {
+  padding: 234px 0px 0 0px;
+  max-width: 1200px;
+}
+
+.video__player {
+  width: 100%;
+}
+
+.main__claim__wrapper {
+  text-align: center;
+  padding: 234px 0;
+}
+
+.claim__headline {
+  font-size: 4.3rem;
+  font-weight: 300;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
