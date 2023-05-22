@@ -106,8 +106,8 @@ body {
 }
 
 .button__cookie__wrapper {
-  width: 300px;
-  height: 65px;
+  width: 280px;
+  height: 70px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -115,21 +115,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #FFFFFF;
+  background-color: gainsboro;
   white-space: nowrap;
   padding: 0 32px;
-  border-radius: 27px;
+  border-radius: 32px;
   font-size: 0.8rem;
   border: transparent;
 }
 
 .button__cookie__wrapper span {
-  margin: 20px 0 0 0;
   text-transform: uppercase;
   color: gray;
   font-size: 0.6rem;
 }
 
+.button__svg--cookie {
+  margin-left: 5px;
+  color: gray;
+}
+
+.button__cookie__left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.button__cookie__check {
+  background-color: gainsboro;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 32px;
+}
+
+.button__cookie__check:hover {
+  background-color: #000;
+}
 
 
 //////////// HEADER STYLING  /////////////
