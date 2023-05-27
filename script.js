@@ -1,5 +1,7 @@
 console.log("Praise the Omnissiah");
 
+console.log("Spirit of this Machine, heed my will!");
+
 
 // let body = document.querySelector(".body").addEventListener("onscroll", headerMovement);
 // 
