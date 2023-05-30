@@ -166,7 +166,7 @@ body {
   gap: 45px;
 }
 
-.header__nav__link {
+.nav__link {
   text-transform: uppercase;
   color: white;
   font-size: 0.8rem;
@@ -174,11 +174,11 @@ body {
   white-space: nowrap;
 }
 
-.header__nav__link:hover {
+.nav__link:hover {
   cursor: pointer;
 }
 
-.header__nav__link::before {
+.nav__link::before {
   content: "[";
   right: 10px;
   position: relative;
@@ -187,7 +187,7 @@ body {
   opacity: 0;
 }
 
-.header__nav__link::after {
+.nav__link::after {
   content: "]";
   left: 10px;
   position: relative;
@@ -196,7 +196,7 @@ body {
   opacity: 0;
 }
 
-.header__nav__link:hover::after, .header__nav__link:hover::before {
+.nav__link:hover::after, .nav__link:hover::before {
   opacity: 1;
 }
 
@@ -350,4 +350,18 @@ body {
 
 .logos__carusel__right--gopro {
   background-image: url("gopro.png");
+}
+
+.inner__footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.footer__left {
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 50px;
 }/*# sourceMappingURL=style.css.map */

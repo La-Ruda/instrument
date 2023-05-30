@@ -22,8 +22,6 @@ let cookieButton = document.querySelector(".button__cookie__wrapper")
 
 
 
-
-
 window.onload = (imagesInterval) => {
     setInterval(() => {
         setInterval(leftImageChange, 3000);
