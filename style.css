@@ -77,7 +77,6 @@ body {
   background-color: #000;
   font-family: "Space Grotesk";
   font-size: 16px;
-  height: 5000px;
 }
 
 .button__cookie__wrapper {
@@ -128,8 +127,8 @@ body {
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.button__cookie__check:hover .button__cookie__check svg {
-  background-color: white;
+.button__cookie__check:hover .check {
+  fill: white;
 }
 
 .header {
@@ -210,11 +209,6 @@ body {
   padding: 234px 0px 0 0px;
   max-width: 1600px;
   margin: 0 auto;
-}
-
-.video__player {
-  width: 100dvw;
-  width: 100%;
 }
 
 .main__claim__wrapper {
@@ -352,6 +346,10 @@ body {
   background-image: url("gopro.png");
 }
 
+.main__footer__wrapper {
+  margin-bottom: 50px;
+}
+
 .inner__footer__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -361,7 +359,52 @@ body {
 .footer__left {
   grid-column: 1;
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  gap: 35px;
+}
+
+.footer__right {
+  grid-column: 2;
+  grid-row: 1;
+  place-self: end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 50px;
+}
+
+.footer__column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.button__default--footer {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  align-self: center;
+}
+
+.button__default--footer:hover {
+  opacity: 0.7;
+  background-color: transparent;
+}
+
+.footer__icons__wrapper {
+  height: 53, 98px;
+  display: flex;
+  gap: 35px;
+  align-self: flex-end;
+  margin: 0 0 15px 0;
+}
+
+.scrolling--up {
+  display: flex;
+}
+
+.scrolling--down {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

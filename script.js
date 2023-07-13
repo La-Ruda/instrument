@@ -1,13 +1,48 @@
-console.log("Praise the Omnissiah");
 
 console.log("Spirit of this Machine, heed my will!");
 
 
-// let body = document.querySelector(".body").addEventListener("onscroll", headerMovement);
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => { 
+
+    const currentScroll = window.pageYOffset;
+
+    const lastScroll = window.pageYOffset - currentScroll;
+
+    console.log(currentScroll);
+
+    if (currentScroll > 100) {
+        header.style.display = "none"
+        header.classList.add("scrolling--down");
+    } 
+
+    if ()
+
+});
+
+
+const header = document.querySelector(".header");
+
+//window.addEventListener("scroll", () => { 
 // 
-// const headerMovement = () => {
+//     const currentScroll = window.pageYOffset;
+// 
+//     console.log(currentScroll);
 //     
-// }
+//     if (currentScroll <= "100") {
+//         header.classList.remove("scroll--up")
+//     }
+//     if (currentScroll > lastScroll && !header.classList.contains("scroll--down")) {
+//         header.classList.remove("scroll--up");
+//         header.classList.add("scroll--down");
+//     } else if (currentScroll < lastScroll && header.classList.contains("scroll--down")) {
+//         header.classList.remove("scroll--down")
+//         header.classList.add("scroll--up")   
+//     }        
+// });
+ 
 
 
 
@@ -22,14 +57,30 @@ let cookieButton = document.querySelector(".button__cookie__wrapper")
 
 
 
-window.onload = (imagesInterval) => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const imagesInterval = () => {
     setInterval(() => {
         setInterval(leftImageChange, 3000);
-        console.log("neser");    
+        // console.log("neser");    
         setInterval(middleImageChange, 4000);
-        console.log("neser");
+        // console.log("neser");
         setInterval(rightImageChange, 5000)
-        console.log("neser");
+        // console.log("neser");
     }, 5000)
 }
 
