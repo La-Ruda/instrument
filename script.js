@@ -2,47 +2,24 @@
 console.log("Spirit of this Machine, heed my will!");
 
 
+let lastScrollPosition = 0
 
-let lastScroll = 0;
 
-window.addEventListener("scroll", () => { 
+window.addEventListener("scroll", () => {
 
-    const currentScroll = window.pageYOffset;
+    let currentPosition = window.pageYOffset;
 
-    const lastScroll = window.pageYOffset - currentScroll;
+    if (currentPosition > 100 && currentPosition > lastScrollPosition) {
+        header.style.transform = "translateY(-200px)"
+    } else {
+        header.style.transform = "translateY(0)"
+    }
 
-    console.log(currentScroll);
-
-    if (currentScroll > 100) {
-        header.style.display = "none"
-        header.classList.add("scrolling--down");
-    } 
-
-    if ()
-
-});
-
+    lastScrollPosition = currentPosition;
+})
 
 const header = document.querySelector(".header");
 
-//window.addEventListener("scroll", () => { 
-// 
-//     const currentScroll = window.pageYOffset;
-// 
-//     console.log(currentScroll);
-//     
-//     if (currentScroll <= "100") {
-//         header.classList.remove("scroll--up")
-//     }
-//     if (currentScroll > lastScroll && !header.classList.contains("scroll--down")) {
-//         header.classList.remove("scroll--up");
-//         header.classList.add("scroll--down");
-//     } else if (currentScroll < lastScroll && header.classList.contains("scroll--down")) {
-//         header.classList.remove("scroll--down")
-//         header.classList.add("scroll--up")   
-//     }        
-// });
- 
 
 
 
@@ -54,20 +31,6 @@ const cookieOpt = () => {
 let cookieCheck = document.querySelector(".button__cookie__check").addEventListener("click", cookieOpt);
 
 let cookieButton = document.querySelector(".button__cookie__wrapper")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

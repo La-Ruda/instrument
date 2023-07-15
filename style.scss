@@ -172,6 +172,7 @@ body {
   align-items: center;
   background-color: #000;
   z-index: 10;
+  transition: ease-in-out 0.5s;
 }
 
 
@@ -351,45 +352,58 @@ body {
 #logos__carusel__right {
   display: flex;
   justify-content: center;
-  border: 1px solid gold;
+  border-top: 1px solid gold;
+  flex: 2;
+  height: 200px;
 }
 
 
 .logos__carusel__left--airbnb {
+  color: transparent;
   background-image: url("airbnb.png");
+  border-bottom: blue 1px solid;
+  z-index: 200;
 }
 
 .logos__carusel__left--path {
   background-image: url("path.png");
+  border-bottom: red 1px solid;
 }
 
 .logos__carusel__left--samsung {
-  background-image: url("samsung.png")
+  background-image: url("samsung.png");
+  border-bottom: red 1px solid;
 }
 
 .logos__carusel__middle--netflix {
   background-image: url("netflix.png");
+  border-bottom: red 1px solid;
 }
 
 .logos__carusel__middle--google {
   background-image: url("google.png");
+  border-bottom: red 1px solid;
 }
 
-.logos__carusel__middle--google {
+.logos__carusel__middle--ebay {
   background-image: url("ebay.png");
+  border-bottom: red 1px solid;
 }
 
 
 .logos__carusel__right--dropbox {
   background-image: url("dropbox.png");
+  border-bottom: red 1px solid;
 }
 
 .logos__carusel__right--tumblr {
   background-image: url("tumblr.png");
+  border-bottom: red 1px solid;
 }
 
 .logos__carusel__right--gopro {
-  background-image: url("gopro.png")
+  background-image: url("gopro.png");
+  border-bottom: red 1px solid;
 }
 
 
@@ -453,12 +467,5 @@ body {
   margin: 0 0 15px 0;
 }
 
-.scrolling--up {
-  display: flex;
-}
-
-.scrolling--down {
-  display: none;
-}
 
 
