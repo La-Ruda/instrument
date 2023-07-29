@@ -317,6 +317,7 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
 .twopiece__left--first,
@@ -479,9 +480,18 @@ body {
 
 @media only screen and (max-width: 1058px) {
   .main__twopiece__wrapper {
-    gap: 50px;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+  }
+  .twopiece__left {
+    grid-column: 1;
+    grid-row: 1;
+    place-self: center;
+  }
+  .twopiece__right {
+    grid-column: 1;
+    grid-row: 2;
+    place-self: center;
   }
   .main__twopiece__wrapper--second,
   .main__claim__wrapper {
