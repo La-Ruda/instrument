@@ -2,6 +2,10 @@
 console.log("Spirit of this Machine, heed my will!");
 
 
+
+
+///////////////// HEADER ROLL_UP & DOWN /////////////
+
 let lastScrollPosition = 0
 
 
@@ -21,7 +25,32 @@ window.addEventListener("scroll", () => {
 const header = document.querySelector(".header");
 
 
-/////////////////////////////////////////////////////////////
+////////// HEADER HAMBURGER /////////////////
+
+
+const unrollHamburger = () => {
+
+    hamLineOne.classList.toggle("hamLineOne--open");
+
+    hamLineTwo.classList.toggle("hamLineTwo--open");
+
+    hamLineThree.classList.toggle("hamLineThree--open");
+
+    hamMenu.classList.toggle("header__right--mobile--open");
+};
+
+const hamLineOne = document.querySelector(".hamburger__line--one");
+
+const hamLineTwo = document.querySelector(".hamburger__line--two");
+
+const hamLineThree = document.querySelector(".hamburger__line--three");
+
+const hamButton = document.querySelector(".header__hamburger").addEventListener("click", unrollHamburger)
+
+const hamMenu = document.querySelector(".header__right--mobile");
+
+
+////////////////////////   COOKIE //////////////////// 
 
 
 
@@ -35,7 +64,7 @@ let cookieButton = document.querySelector(".button__cookie__wrapper")
 
 
 
-//////////////////////////////////////////////////////////
+/////////  IMAGES ////////////
 
 
 
@@ -98,7 +127,7 @@ const middleImageChange = () => {
     }
 }
 
-setInterval(middleImageChange, 4000);
+setInterval(middleImageChange, 3150);
 
 
 let tracker = 0
@@ -123,6 +152,4 @@ const rightImageChange = () => {
 }
 
 
-setInterval(rightImageChange, 3500);
-
-
+setInterval(rightImageChange, 3300);
