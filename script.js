@@ -21,6 +21,7 @@ window.addEventListener("scroll", () => {
 const header = document.querySelector(".header");
 
 
+/////////////////////////////////////////////////////////////
 
 
 
@@ -34,47 +35,94 @@ let cookieButton = document.querySelector(".button__cookie__wrapper")
 
 
 
+//////////////////////////////////////////////////////////
 
 
-const imagesInterval = () => {
-    setInterval(() => {
-        setInterval(leftImageChange, 3000);
-        // console.log("neser");    
-        setInterval(middleImageChange, 4000);
-        // console.log("neser");
-        setInterval(rightImageChange, 5000)
-        // console.log("neser");
-    }, 5000)
-}
 
-const leftImage = document.querySelector("#logos__carusel__left");
+const leftImage = document.querySelector(".logo__img--left");
 
-const middleImage = document.querySelector("#logos__carusel__middle");
+const middleImage = document.querySelector(".logo__img--middle");
 
-const rightImage = document.querySelector("#logos__carusel__right");
+const rightImage = document.querySelector(".logo__img--right");
 
 
+const leftLink = document.querySelector(".logo__link--left");
+
+const middleLink = document.querySelector(".logo__link--middle");
+
+const rightLink = document.querySelector(".logo__link--right");
+
+
+
+let counter = 0;
 
 const leftImageChange = () => {
+    
+    counter++;
 
-    leftImage.classList.add("logos__carusel__left--airbnb");
-    // leftImage.classList.toggle("logos__carusel__left--path");
-    // leftImage.classList.toggle("logos__carusel__left--samsung");
-}
+    if (counter === 1) {
+        leftImage.src = "/airbnb.png"
+        leftLink.href = "https://airbnb.com"
+    } else if (counter === 2) {
+        leftImage.src = "/path.png"
+        leftLink.href = "https://path.com"
+    } else if (counter === 3) {
+        leftImage.src = "/samsung.png"
+        leftLink.href = "https://samsung.com"
+    }else if (counter === 4) {
+        counter = 0;
+    }
+};
 
+
+setInterval(leftImageChange, 3000);
+
+
+let legranda = 0
 
 const middleImageChange = () => {
 
-    middleImage.classList.add("logos__carusel__middle--netflix");
-    // middleImage.classList.toggle("logos__carusel__middle--google");
-    // middleImage.classList.toggle("logos__carusel__middle--ebay");
+    legranda++;
+
+    if (legranda === 1) {
+        middleImage.src = "/netflix.png"
+        middleLink.href = "https://netflix.com"
+    } else if (legranda === 2) {
+        middleImage.src = "/google.png"
+        middleLink.href = "https://google.com"
+    } else if (legranda === 3) {
+        middleImage.src = "/ebay.png"
+        middleLink.href = "https://ebay.com"
+    }else if (legranda === 4) {
+        legranda = 0;
+    }
 }
+
+setInterval(middleImageChange, 4000);
+
+
+let tracker = 0
 
 
 const rightImageChange = () => {
-    rightImage.classList.add("logos__carusel__right--dropbox");
-    // rightImage.classList.toggle("logos__carusel__right--tumblr");
-    // rightImage.classList.toggle("logos__carusel__right--gopro")   
+
+    tracker++;
+
+    if (tracker === 1) {
+        rightImage.src = "/dropbox.png"
+        rightLink.href = "https://dropbox.com"
+    } else if (tracker === 2) {
+        rightImage.src = "/tumblr.png"
+        rightLink.href = "https://tumblr.com"
+    } else if (tracker === 3) {
+        rightImage.src = "/gopro.png"
+        rightLink.href = "https://gopro.com"
+    }else if (tracker === 4) {
+        tracker = 0;
+    }
 }
+
+
+setInterval(rightImageChange, 3500);
 
 
