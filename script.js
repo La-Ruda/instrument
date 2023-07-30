@@ -151,5 +151,4 @@ const rightImageChange = () => {
     }
 }
 
-
 setInterval(rightImageChange, 3300);

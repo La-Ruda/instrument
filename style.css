@@ -79,28 +79,24 @@ body {
   font-size: 16px;
 }
 
-.kokot {
+.button__cookie__wrapper {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  padding: 0 0 0 32px;
-}
-
-.button__cookie__wrapper {
-  max-width: 280px;
-  width: calc(100% - 40px);
+  max-width: 320px;
   height: 70px;
+  flex: 2;
   gap: 20px;
   text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: gainsboro;
-  white-space: nowrap;
   padding: 0 32px;
   border-radius: 32px;
   font-size: 0.8rem;
   border: transparent;
+  margin: 0 0 0 20px;
 }
 
 .button__cookie__wrapper span {
@@ -286,23 +282,13 @@ body {
 }
 
 .main__video__wrapper {
-  padding: 0px 0 0px;
-  max-width: 1600px;
-  margin: 0 auto;
-  -o-object-fit: fill;
-     object-fit: fill;
+  display: flex;
+  flex: 2;
 }
 
 .main__claim__wrapper {
   text-align: center;
-  padding: 234px 0;
-}
-
-.video__player {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  padding: 200px 0;
 }
 
 .claim__headline {
@@ -421,7 +407,8 @@ body {
 }
 
 .main__footer__wrapper {
-  margin: 0 auto 50px;
+  margin: 0 auto;
+  padding: 0 0 56px 0;
 }
 
 .inner__footer__wrapper {
@@ -494,7 +481,8 @@ body {
     place-self: center;
   }
   .main__twopiece__wrapper--second,
-  .main__claim__wrapper {
+  .main__claim__wrapper,
+  .secondary__twopiece__wrapper {
     padding: 56px 0;
     margin: unset;
   }
@@ -545,7 +533,7 @@ body {
     padding: 0 15px;
   }
   .secondary__twopiece__wrapper {
-    padding: 0 0 50px 0;
+    padding: 0 0 56px 0;
   }
   .header__inner--mobile {
     margin: 0 20px;
