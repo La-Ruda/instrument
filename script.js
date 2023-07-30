@@ -1,9 +1,6 @@
 
 console.log("Spirit of this Machine, heed my will!");
 
-
-///SKRRR
-
 ///////////////// HEADER ROLL_UP & DOWN /////////////
 
 let lastScrollPosition = 0
@@ -15,14 +12,18 @@ window.addEventListener("scroll", () => {
 
     if (currentPosition > 100 && currentPosition > lastScrollPosition) {
         header.style.transform = "translateY(-200px)"
+        mobileHeader.style.transform = "translateY(-200px)"
     } else {
         header.style.transform = "translateY(0)"
+        mobileHeader.style.transform = "translateY(0)"
     }
 
     lastScrollPosition = currentPosition;
 })
 
 const header = document.querySelector(".header");
+
+const mobileHeader = document.querySelector(".header--mobile");
 
 
 ////////// HEADER HAMBURGER /////////////////

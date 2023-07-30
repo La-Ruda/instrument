@@ -169,6 +169,7 @@ body {
   display: flex;
   flex: 2;
   gap: 45px;
+  margin: 0px 50px;
 }
 
 .nav__link {
@@ -218,6 +219,7 @@ body {
 
 .header__inner--mobile {
   height: 50px;
+  z-index: 20;
 }
 
 .header__right--mobile {
@@ -228,6 +230,8 @@ body {
   align-items: center;
   position: relative;
   top: -500px;
+  z-index: 1;
+  margin: 50px 0;
 }
 
 .nav__link--mobile {
@@ -241,7 +245,6 @@ body {
 
 .header__nav__right--mobile {
   flex-direction: column;
-  padding: 0 17px;
 }
 
 .header__hamburger__button {
@@ -282,8 +285,7 @@ body {
 }
 
 .main__video__wrapper {
-  display: flex;
-  flex: 2;
+  padding: 234px 0 0;
 }
 
 .main__claim__wrapper {
