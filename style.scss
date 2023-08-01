@@ -42,8 +42,8 @@ a {
   color: #767676;
 }
 
-input, select {
-  vertical-align: middle;
+a:hover {
+  cursor: pointer;
 }
 
 * {
@@ -82,9 +82,7 @@ input, select {
   border: transparent;
 };
 
-
-//////////////////// REUSABLE STYLES /////////
-
+//////////////////// BUTTON STYLES /////////
 
 .button__default {
   @include button();
@@ -112,7 +110,6 @@ body {
   right: 50px;
   max-width: 320px;
   height: 70px;
-  flex: 2;
   gap: 20px;
   text-align: left;
   display: flex;
@@ -154,7 +151,6 @@ body {
 .button__cookie__check:hover {
   background-color: #000;
   transition: ease-in-out 0.3s;
-  cursor: pointer;
 
   .check {
     fill: white;
@@ -177,18 +173,14 @@ body {
   transition: ease-in-out 0.5s;
 }
 
-
 .header__inner {
   max-width: 1600px;
-  margin: 0 50px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
-}
-
-.header--mobile {
-  display: none;
+  flex: 2;
+  padding: 0 50px;
 }
 
 .header__icon__svg {
@@ -196,11 +188,10 @@ body {
   height: 19.25px;
 }
 
-.header__nav__right {
+.header__right__nav {
   display: flex;
-  flex: 2;
-  gap: 45px;
-  margin: 0px 50px;
+  gap: 20px;
+  justify-content: flex-end;
 }
 
 .nav__link {
@@ -212,12 +203,9 @@ body {
 }
 
 .nav__link--last {
-  padding: 5px 0px 25px 0;
+  padding: 5px 0px 5px 25px;
 }
 
-.nav__link:hover {
-  cursor: pointer;
-}
 
 .nav__link::before {
   content: "[";
@@ -238,7 +226,6 @@ body {
   }
 }
 
-
 //////////// HAMBURGER  /////////////
 
 .header--mobile {
@@ -253,31 +240,28 @@ body {
   z-index: 20;
 }
 
-
 .header__right--mobile {
   height: 500px;
   width: 100dvw;
   display: flex;
   background-color: #000;
   align-items: center;
-  position: relative;
+  position: absolute;
   top: -500px;
-  z-index: 1;
-  margin: 50px 0; 
 }
 
 .nav__link--mobile {
   padding: 5px 25px 5px 0;
 }
 
-
 .header__right--mobile--open {
   top: 0;
   position: fixed;
 }
 
-.header__nav__right--mobile {
+.header__right__nav--mobile {
   flex-direction: column;
+  margin: 0 50px;
 }
 
 .header__hamburger__button {
@@ -299,7 +283,6 @@ body {
   background-color: #FFFFFF; 
 }
 
-
 .hamLineOne--open {
   transform: rotate(45deg) translateX(5px) translateY(5px);
 }
@@ -311,7 +294,6 @@ body {
 .hamLineThree--open {
   transform: rotate(-45deg) translateX(5px) translateY(-5px);
 }
-
 
 //////////////// MAIN WRAPPER ////////////////////////////////////////////////////////
 
@@ -325,7 +307,6 @@ body {
   padding: 0 50px;
 }
 
-
 .main__video__wrapper {
   padding: 234px 0 0;
 }
@@ -334,7 +315,6 @@ body {
   text-align: center;
   padding: 200px 0;
 }
-
 
 .claim__headline {
   font-size: 3.5rem;
@@ -373,13 +353,10 @@ body {
   place-self: start start;
 }
 
-
 .twopiece__image {
   width: 100%;
   max-width: 700px;
-  height: auto;
 }
-
 
 .twopiece__right {
   display: flex;
@@ -393,11 +370,6 @@ body {
   font-size: 1.7rem;
   max-width: 450px;
   line-height: 1.5;
-}
-
-.main__twopiece__wrapper--second {
-  flex-direction: row-reverse;
-  margin: 200px 0 0 0;
 }
 
 /////////// RECENT PROJECTS PART //////
@@ -435,7 +407,6 @@ body {
   max-width: 370px;
 }
 
-
 /////////// LOGOS PART /////////////
 
 
@@ -447,21 +418,17 @@ body {
   max-width: 900px;
 }
 
-
 #logos__carusel__left,
 #logos__carusel__middle,
 #logos__carusel__right {
   display: flex;
   justify-content: center;
-  flex: 2;
 }
 
 .logo__img {
   width: 100%;
   max-width: 250px;
-  height: auto;
 }
-
 
 /////////// FOOTER /////////////
 
@@ -475,7 +442,6 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
-
 
 .footer__left {
   grid-column: 1;
@@ -502,7 +468,6 @@ body {
   flex-direction: column;
   gap: 25px;
 }
-
 
 .button__default--footer {
   background-color: transparent;
@@ -535,7 +500,6 @@ body {
     grid-template-rows: 1fr 0.5fr;
   }
 
-
   .twopiece__left {
     grid-column: 1;
     grid-row: 1;
@@ -548,7 +512,7 @@ body {
     place-self: center;
   }
 
-  .main__twopiece__wrapper--second,
+  .main__twopiece__wrapper,
   .main__claim__wrapper,
   .secondary__twopiece__wrapper {
     padding: 56px 0;
@@ -575,6 +539,10 @@ body {
 }
 
 @media only screen and (max-width: 849px) {
+
+  .header {
+    display: none;
+  }
 
   .header--mobile {
     display: flex;
@@ -618,7 +586,9 @@ body {
     padding: 0 0 56px 0;
   }
 
-  .header__inner--mobile {
+  .header__inner--mobile,
+  .header__right__nav {
     margin: 0 20px;
-  }
+    padding: unset;
+  }  
 }
