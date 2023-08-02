@@ -16,7 +16,6 @@ window.addEventListener("scroll", () => {
         header.style.transform = "translateY(0)";
         mobileHeader.style.transform = "translateY(0)";
     }
-
     lastScrollPosition = currentPosition;
 })
 

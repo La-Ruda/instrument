@@ -80,10 +80,9 @@ body {
 }
 
 .button__cookie__wrapper {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  max-width: 320px;
+  position: sticky;
+  bottom: 100px;
+  max-width: 288px;
   height: 70px;
   gap: 20px;
   text-align: left;
@@ -95,7 +94,7 @@ body {
   border-radius: 32px;
   font-size: 0.8rem;
   border: transparent;
-  margin: 0 0 0 20px;
+  margin-left: auto;
 }
 
 .button__cookie__wrapper span {
@@ -135,7 +134,7 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0px;
+  top: 0;
   height: 120px;
   display: flex;
   justify-content: center;
