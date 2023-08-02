@@ -1,32 +1,30 @@
 
 console.log("Spirit of this Machine, heed my will!");
 
-
-///SKRRR
-
 ///////////////// HEADER ROLL_UP & DOWN /////////////
 
 let lastScrollPosition = 0
-
 
 window.addEventListener("scroll", () => {
 
     let currentPosition = window.pageYOffset;
 
     if (currentPosition > 100 && currentPosition > lastScrollPosition) {
-        header.style.transform = "translateY(-200px)"
+        header.style.transform = "translateY(-200px)";
+        mobileHeader.style.transform = "translateY(-700px)";
     } else {
-        header.style.transform = "translateY(0)"
+        header.style.transform = "translateY(0)";
+        mobileHeader.style.transform = "translateY(0)";
     }
-
     lastScrollPosition = currentPosition;
 })
 
 const header = document.querySelector(".header");
 
+const mobileHeader = document.querySelector(".header--mobile");
+
 
 ////////// HEADER HAMBURGER /////////////////
-
 
 const unrollHamburger = () => {
 
@@ -52,8 +50,6 @@ const hamMenu = document.querySelector(".header__right--mobile");
 
 ////////////////////////   COOKIE //////////////////// 
 
-
-
 const cookieOpt = () => {
     cookieButton.style.display = "none";
 }
@@ -62,11 +58,7 @@ let cookieCheck = document.querySelector(".button__cookie__check").addEventListe
 
 let cookieButton = document.querySelector(".button__cookie__wrapper")
 
-
-
 /////////  IMAGES ////////////
-
-
 
 const leftImage = document.querySelector(".logo__img--left");
 
@@ -83,73 +75,36 @@ const rightLink = document.querySelector(".logo__link--right");
 
 
 
-let counter = 0;
-
-const leftImageChange = () => {
+const changeImage = (image,link,imagesArray,linksArray, interval) => {
     
-    counter++;
+    let counter = 0
 
-    if (counter === 1) {
-        leftImage.src = "/airbnb.png"
-        leftLink.href = "https://airbnb.com"
-    } else if (counter === 2) {
-        leftImage.src = "/path.png"
-        leftLink.href = "https://path.com"
-    } else if (counter === 3) {
-        leftImage.src = "/samsung.png"
-        leftLink.href = "https://samsung.com"
-    }else if (counter === 4) {
-        counter = 0;
-    }
-};
+    setInterval(() => {
+        counter++;
 
+        switch (counter) {
+            case 1:
+                image.src = imagesArray[0];
+                link.href = linksArray[0]
+                break;
+            
+            case 2:
+                image.src = imagesArray[1];
+                link.href = linksArray[1]
+            break;
 
-setInterval(leftImageChange, 3000);
+            case 3:
+                image.src = imagesArray[2];
+                link.href = linksArray[2]
+                break;
 
-
-let legranda = 0
-
-const middleImageChange = () => {
-
-    legranda++;
-
-    if (legranda === 1) {
-        middleImage.src = "/netflix.png"
-        middleLink.href = "https://netflix.com"
-    } else if (legranda === 2) {
-        middleImage.src = "/google.png"
-        middleLink.href = "https://google.com"
-    } else if (legranda === 3) {
-        middleImage.src = "/ebay.png"
-        middleLink.href = "https://ebay.com"
-    }else if (legranda === 4) {
-        legranda = 0;
-    }
+            case 4:
+                counter = 0;
+                break;
+        }
+     }, interval);
 }
 
-setInterval(middleImageChange, 3150);
-
-
-let tracker = 0
-
-
-const rightImageChange = () => {
-
-    tracker++;
-
-    if (tracker === 1) {
-        rightImage.src = "/dropbox.png"
-        rightLink.href = "https://dropbox.com"
-    } else if (tracker === 2) {
-        rightImage.src = "/tumblr.png"
-        rightLink.href = "https://tumblr.com"
-    } else if (tracker === 3) {
-        rightImage.src = "/gopro.png"
-        rightLink.href = "https://gopro.com"
-    }else if (tracker === 4) {
-        tracker = 0;
-    }
-}
-
-
-setInterval(rightImageChange, 3300);
+changeImage(leftImage, leftLink, ["airbnb.png", "path.png", "samsung.png"], ["https://airbnb.com", "https://path.com", "https://samsung.com"], 3000);
+changeImage(middleImage, middleLink, ["netflix.png", "google.png", "ebay.png"], ["https://netflix.com", "https://google.com", "https://ebay.com"], 3500);
+changeImage(rightImage, rightLink, ["dropbox.png", "tumblr.png", "gopro.png"], ["https://dropbox.com", "https://tumblr.com", "https://gopro.com"], 4000);
